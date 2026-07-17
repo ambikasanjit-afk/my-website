@@ -11,6 +11,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -29,7 +30,7 @@ top:0;
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:#7c5cff;
 }
@@ -46,21 +47,17 @@ padding:80px 20px;
 }
 
 .hero h1{
-font-size:50px;
+font-size:52px;
 color:#7c5cff;
 }
 
 .hero p{
-margin-top:15px;
-font-size:20px;
+margin:20px 0;
 color:#c9d1d9;
+font-size:20px;
 }
 
-.search{
-margin-top:30px;
-}
-
-.search input{
+#search{
 width:80%;
 max-width:500px;
 padding:15px;
@@ -90,20 +87,21 @@ background:#161b22;
 padding:20px;
 border-radius:15px;
 transition:.3s;
+text-align:center;
 }
 
 .card:hover{
-transform:translateY(-5px);
+transform:translateY(-8px);
 }
 
 .card h3{
-color:#7c5cff;
 margin-bottom:10px;
+color:#7c5cff;
 }
 
 button{
-margin-top:15px;
 padding:10px 20px;
+margin-top:15px;
 border:none;
 border-radius:8px;
 background:#7c5cff;
@@ -111,11 +109,15 @@ color:white;
 cursor:pointer;
 }
 
+button:hover{
+background:#5d3dff;
+}
+
 footer{
-text-align:center;
-padding:20px;
 background:#161b22;
-margin-top:50px;
+padding:25px;
+text-align:center;
+margin-top:40px;
 }
 </style>
 </head>
@@ -127,90 +129,99 @@ margin-top:50px;
 
 <nav>
 <a href="#">Home</a>
-<a href="#">Tools</a>
-<a href="#">Categories</a>
-<a href="#">About</a>
+<a href="#tools">Tools</a>
+<a href="#categories">Categories</a>
 </nav>
 </header>
 
 <section class="hero">
-<h1>Discover the Best AI Tools</h1>
+
+<h1>Find The Best AI Tools</h1>
+
 <p>Your AI Assistant for Every Task 🚀</p>
 
-<div class="search">
-<input type="text" placeholder="Search AI Tools...">
-</div>
+<input
+id="search"
+type="text"
+placeholder="Search AI Tool..."
+onkeyup="searchTools()">
+
 </section>
 
-<section>
+<section id="tools">
 
 <h2>🔥 Trending AI Tools</h2>
 
-<div class="cards">
+<div class="cards" id="toolList">
 
 <div class="card">
 <h3>ChatGPT</h3>
 <p>AI Chat Assistant</p>
-<button>Open</button>
+<button onclick="window.open('https://chatgpt.com')">Open</button>
 </div>
 
 <div class="card">
 <h3>Gemini</h3>
 <p>Google AI Assistant</p>
-<button>Open</button>
+<button onclick="window.open('https://gemini.google.com')">Open</button>
 </div>
 
 <div class="card">
 <h3>Claude</h3>
 <p>Writing & Coding AI</p>
-<button>Open</button>
+<button onclick="window.open('https://claude.ai')">Open</button>
 </div>
 
 <div class="card">
 <h3>Perplexity</h3>
 <p>AI Search Engine</p>
-<button>Open</button>
+<button onclick="window.open('https://www.perplexity.ai')">Open</button>
 </div>
 
 <div class="card">
 <h3>Canva AI</h3>
-<p>AI Design Tool</p>
-<button>Open</button>
-</div>
-
-<div class="card">
-<h3>Midjourney</h3>
-<p>AI Image Generator</p>
-<button>Open</button>
-</div>
-
-<div class="card">
-<h3>Runway</h3>
-<p>AI Video Generator</p>
-<button>Open</button>
+<p>AI Design</p>
+<button onclick="window.open('https://www.canva.com')">Open</button>
 </div>
 
 <div class="card">
 <h3>GitHub Copilot</h3>
-<p>AI Coding Assistant</p>
-<button>Open</button>
+<p>AI Coding</p>
+<button onclick="window.open('https://github.com/features/copilot')">Open</button>
+</div>
+
+<div class="card">
+<h3>Runway</h3>
+<p>AI Video</p>
+<button onclick="window.open('https://runwayml.com')">Open</button>
+</div>
+
+<div class="card">
+<h3>Suno AI</h3>
+<p>AI Music</p>
+<button onclick="window.open('https://suno.com')">Open</button>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section id="categories">
 
 <h2>📂 Categories</h2>
 
 <div class="cards">
 
-<div class="card"><h3>✍️ Writing</h3></div>
+<div class="card"><h3>💬 Chat</h3></div>
+
 <div class="card"><h3>🎨 Image</h3></div>
+
 <div class="card"><h3>🎥 Video</h3></div>
+
 <div class="card"><h3>💻 Coding</h3></div>
+
 <div class="card"><h3>📚 Study</h3></div>
+
 <div class="card"><h3>🎵 Music</h3></div>
 
 </div>
@@ -219,13 +230,39 @@ margin-top:50px;
 
 <footer>
 
-<h3>AI Genie</h3>
+<h2>AI Genie</h2>
 
 <p>Your AI Assistant for Every Task</p>
 
 <p>© 2026 AI Genie | Built by Sanjith</p>
 
 </footer>
+
+<script>
+function searchTools(){
+
+let input=document.getElementById("search").value.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text=card.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+}
+</script>
 
 </body>
 </html>
