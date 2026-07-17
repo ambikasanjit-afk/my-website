@@ -1,0 +1,16 @@
+body{
+    background:#0d1117;
+    color:white;
+    font-family:Arial,sans-serif;
+}
+
+h1{
+    color:#7c5cff;
+    text-align:center;
+}
+
+.card{
+    background:#161b22;
+    padding:20px;
+    border-radius:10px;
+}
