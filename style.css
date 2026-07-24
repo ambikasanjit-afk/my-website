@@ -143,3 +143,19 @@ button{
 button:hover{
     background:#6d28d9;
 }
+.card img{
+    width:60px;
+    height:60px;
+    margin-bottom:15px;
+}
+
+.rating{
+    display:inline-block;
+    background:#facc15;
+    color:#111827;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
