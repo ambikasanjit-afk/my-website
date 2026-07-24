@@ -158,3 +158,27 @@ width:95%;
 }
 
 }
+.card img{
+width:60px;
+height:60px;
+margin-bottom:15px;
+}
+
+.badge{
+display:inline-block;
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.free{
+background:#16a34a;
+color:white;
+}
+
+.paid{
+background:#dc2626;
+color:white;
+}
