@@ -1,81 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Genie Pro</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Genie Pro</title>
 
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header class="header">
+  <div class="logo">🧞 AI Genie Pro</div>
 
-<div class="logo">🧞 AI Genie Pro</div>
-
-<nav>
-<a href="#">Home</a>
-<a href="#stats">Stats</a>
-<a href="#tools">Tools</a>
-<a href="#trending">Trending</a>
-<a href="#categories">Categories</a>
-<a href="#contact">Contact</a>
-</nav>
-
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#tools">AI Tools</a>
+    <a href="#trending">Trending</a>
+    <a href="#categories">Categories</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section class="hero">
+<section id="home" class="hero">
+  <h1>Discover the Best AI Tools</h1>
 
-<h1>Find the Best AI Tools in Seconds</h1>
+  <p>
+    Find powerful AI tools for coding, writing, design,
+    video editing, productivity, and much more.
+  </p>
 
-<p>
-Discover the world's top AI tools for writing, coding,
-image generation, video editing, music creation,
-productivity and learning.
-</p>
-
-<input
-type="text"
-id="search"
-placeholder="Search AI Tools..."
-onkeyup="searchTools()">
-
+  <input
+    type="text"
+    id="search"
+    placeholder="Search AI Tools..."
+    onkeyup="searchTools()">
 </section>
-
 <section id="stats" class="stats">
 
-<div class="stat-box">
-<h2>100+</h2>
-<p>AI Tools</p>
-</div>
+  <div class="stat-box">
+    <h2>100+</h2>
+    <p>AI Tools</p>
+  </div>
 
-<div class="stat-box">
-<h2>20+</h2>
-<p>Categories</p>
-</div>
+  <div class="stat-box">
+    <h2>20+</h2>
+    <p>Categories</p>
+  </div>
 
-<div class="stat-box">
-<h2>50K+</h2>
-<p>Monthly Visitors</p>
-</div>
+  <div class="stat-box">
+    <h2>24/7</h2>
+    <p>Available</p>
+  </div>
 
-<div class="stat-box">
-<h2>24/7</h2>
-<p>Available</p>
-</div>
+  <div class="stat-box">
+    <h2>1000+</h2>
+    <p>Visitors</p>
+  </div>
 
 </section>
-
 <section id="tools">
 
-<h2>🔥 Featured AI Tools</h2>
+<h2>🤖 Featured AI Tools</h2>
 
 <div class="cards">
 
 <div class="card">
 <h3>ChatGPT</h3>
-<p>AI Chat Assistant</p>
+<p>AI Chat Assistant by OpenAI</p>
 <a href="https://chatgpt.com" target="_blank">
 <button>Open</button>
 </a>
@@ -91,7 +83,7 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h3>Claude</h3>
-<p>Writing & Coding AI</p>
+<p>AI Writing Assistant</p>
 <a href="https://claude.ai" target="_blank">
 <button>Open</button>
 </a>
@@ -104,26 +96,36 @@ onkeyup="searchTools()">
 <button>Open</button>
 </a>
 </div>
+
+</div>
+
+</section>
+<section id="trending">
+
+<h2>🔥 Trending AI Tools</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Grok</h3>
+<p>xAI Assistant</p>
+<a href="https://grok.com" target="_blank">
+<button>Open</button>
+</a>
+</div>
+
+<div class="card">
+<h3>Cursor</h3>
+<p>AI Code Editor</p>
+<a href="https://cursor.com" target="_blank">
+<button>Open</button>
+</a>
+</div>
+
 <div class="card">
 <h3>Canva AI</h3>
 <p>AI Design Tool</p>
 <a href="https://www.canva.com" target="_blank">
-<button>Open</button>
-</a>
-</div>
-
-<div class="card">
-<h3>GitHub Copilot</h3>
-<p>AI Coding Assistant</p>
-<a href="https://github.com/features/copilot" target="_blank">
-<button>Open</button>
-</a>
-</div>
-
-<div class="card">
-<h3>Runway</h3>
-<p>AI Video Generator</p>
-<a href="https://runwayml.com" target="_blank">
 <button>Open</button>
 </a>
 </div>
@@ -139,49 +141,6 @@ onkeyup="searchTools()">
 </div>
 
 </section>
-
-<section id="trending">
-
-<h2>🔥 Trending AI Tools</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Grok AI</h3>
-<p>xAI Assistant</p>
-<a href="https://grok.com" target="_blank">
-<button>Open</button>
-</a>
-</div>
-
-<div class="card">
-<h3>Cursor AI</h3>
-<p>AI Code Editor</p>
-<a href="https://cursor.com" target="_blank">
-<button>Open</button>
-</a>
-</div>
-
-<div class="card">
-<h3>Bolt.new</h3>
-<p>Build Apps with AI</p>
-<a href="https://bolt.new" target="_blank">
-<button>Open</button>
-</a>
-</div>
-
-<div class="card">
-<h3>Lovable</h3>
-<p>AI Website Builder</p>
-<a href="https://lovable.dev" target="_blank">
-<button>Open</button>
-</a>
-</div>
-
-</div>
-
-</section>
-
 <section id="categories">
 
 <h2>📂 Categories</h2>
@@ -190,26 +149,27 @@ onkeyup="searchTools()">
 
 <div class="card">
 <h3>💬 Chat AI</h3>
-<p>Chatbots & Assistants</p>
+<p>AI Chatbots & Assistants</p>
 </div>
 
 <div class="card">
 <h3>💻 Coding AI</h3>
-<p>Programming Tools</p>
+<p>Programming & Development</p>
 </div>
 
 <div class="card">
 <h3>🎨 Image AI</h3>
-<p>Image Generation</p>
+<p>Image Generation & Editing</p>
 </div>
 
 <div class="card">
 <h3>🎥 Video AI</h3>
-<p>Video Creation</p>
+<p>Video Creation & Editing</p>
 </div>
+
 <div class="card">
 <h3>🎵 Music AI</h3>
-<p>Music Generation</p>
+<p>AI Music & Audio</p>
 </div>
 
 <div class="card">
@@ -217,45 +177,31 @@ onkeyup="searchTools()">
 <p>Learning & Education</p>
 </div>
 
-<div class="card">
-<h3>📈 Productivity AI</h3>
-<p>Work Smarter</p>
-</div>
-
-<div class="card">
-<h3>📢 Marketing AI</h3>
-<p>Content & Ads</p>
-</div>
-
 </div>
 
 </section>
-
 <section id="contact">
 
 <h2>📞 Contact</h2>
 
 <p style="text-align:center;">
-Need to suggest a new AI tool?
-Contact the AI Genie Pro team.
+Have a new AI tool suggestion?
+Email us anytime!
 </p>
 
 <p style="text-align:center;">
-Email: support@aigeniepro.com
+📧 support@aigeniepro.com
 </p>
 
 </section>
 
 <footer>
-
-<h3>🧞 AI Genie Pro</h3>
-
-<p>Your AI Assistant for Every Task</p>
-
-<p>© 2026 AI Genie Pro. All Rights Reserved.</p>
-
+<p>© 2026 AI Genie Pro | Built with ❤️ by Sanju</p>
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
+
+
