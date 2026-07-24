@@ -213,3 +213,13 @@ font-size:16px;
 width:95%;
 }
 }
+.trending{
+padding:60px 20px;
+background:#111827;
+}
+
+.trending h2{
+text-align:center;
+margin-bottom:30px;
+color:#8b5cf6;
+}
