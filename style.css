@@ -237,3 +237,22 @@ transition:.3s;
 .fav-btn:hover{
 background:#dc2626;
 }
+nav{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
+padding:10px 15px;
+border-radius:8px;
+transition:0.3s;
+}
+
+nav a:hover{
+background:#8b5cf6;
+color:white;
+}
