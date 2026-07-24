@@ -3,120 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Genie</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#0d1117;
-color:white;
-}
-
-header{
-background:#161b22;
-padding:20px;
-text-align:center;
-}
-
-header h1{
-color:#7c5cff;
-}
-
-.hero{
-text-align:center;
-padding:50px 20px;
-}
-
-input{
-padding:12px;
-width:80%;
-max-width:400px;
-border-radius:8px;
-border:none;
-}
-
-.tools{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-padding:20px;
-}
-
-.card{
-background:#161b22;
-padding:20px;
-border-radius:10px;
-text-align:center;
-}
-
-a{
-display:inline-block;
-margin-top:10px;
-padding:10px 15px;
-background:#7c5cff;
-color:white;
-text-decoration:none;
-border-radius:6px;
-}
-</style>
-
+<title>AI Genie Pro</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-<h1>🧞 AI Genie</h1>
-<p>Your AI Assistant for Every Task</p>
+<header class="header">
+<div class="logo">🧞 AI Genie Pro</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="#tools">Tools</a>
+<a href="#categories">Categories</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-<h2>Find the Best AI Tools</h2>
-<input id="search" type="text" placeholder="Search AI Tools..." onkeyup="searchTools()">
+
+<h1>Find the Best AI Tools in Seconds</h1>
+
+<p>
+Discover the world's top AI tools for writing,
+coding, image generation, video editing,
+music creation and productivity.
+</p>
+
+<input
+type="text"
+id="search"
+placeholder="Search AI Tools..."
+onkeyup="searchTools()">
+
 </section>
 
-<section class="tools">
+<section id="tools">
+
+<h2>🔥 Featured AI Tools</h2>
+
+<div class="cards">
 
 <div class="card">
 <h3>ChatGPT</h3>
 <p>AI Chat Assistant</p>
-<a href="https://chatgpt.com" target="_blank">Open</a>
+<a href="https://chatgpt.com" target="_blank">
+<button>Open</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Gemini</h3>
 <p>Google AI Assistant</p>
-<a href="https://gemini.google.com" target="_blank">Open</a>
+<a href="https://gemini.google.com" target="_blank">
+<button>Open</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Claude</h3>
-<p>AI Writing Assistant</p>
-<a href="https://claude.ai" target="_blank">Open</a>
+<p>Writing & Coding AI</p>
+<a href="https://claude.ai" target="_blank">
+<button>Open</button>
+</a>
 </div>
 
 <div class="card">
 <h3>Perplexity</h3>
 <p>AI Search Engine</p>
-<a href="https://www.perplexity.ai" target="_blank">Open</a>
+<a href="https://www.perplexity.ai" target="_blank">
+<button>Open</button>
+</a>
 </div>
-
-</section>
-
-<script>
-function searchTools(){
-let input=document.getElementById("search").value.toLowerCase();
-let cards=document.getElementsByClassName("card");
-
-for(let i=0;i<cards.length;i++){
-if(cards[i].innerText.toLowerCase().includes(input)){
-cards[i].style.display="block";
-}else{
-cards[i].style.display="none";
-}
-}
-}
-</script>
-
-</body>
-</html>
