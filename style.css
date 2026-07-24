@@ -33,7 +33,7 @@ nav a{
 color:#fff;
 text-decoration:none;
 margin-left:20px;
-transition:0.3s;
+transition:.3s;
 }
 
 nav a:hover{
@@ -53,8 +53,7 @@ margin-bottom:20px;
 
 .hero p{
 max-width:700px;
-margin:auto;
-margin-bottom:30px;
+margin:20px auto;
 font-size:18px;
 }
 
@@ -67,6 +66,7 @@ border-radius:10px;
 font-size:16px;
 outline:none;
 }
+
 section{
 padding:60px 20px;
 }
@@ -88,13 +88,19 @@ background:#161b22;
 padding:20px;
 border-radius:15px;
 text-align:center;
-transition:0.3s;
-box-shadow:0 4px 10px rgba(0,0,0,0.3);
+transition:.3s;
+box-shadow:0 4px 10px rgba(0,0,0,.3);
 }
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 8px 20px rgba(139,92,246,0.4);
+box-shadow:0 8px 20px rgba(139,92,246,.4);
+}
+
+.card img{
+width:60px;
+height:60px;
+margin-bottom:15px;
 }
 
 .card h3{
@@ -107,30 +113,80 @@ color:#c9d1d9;
 margin-bottom:15px;
 }
 
+.badge{
+display:inline-block;
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.free{
+background:#16a34a;
+color:#fff;
+}
+
+.paid{
+background:#dc2626;
+color:#fff;
+}
+
 button{
 background:#8b5cf6;
-color:white;
+color:#fff;
 border:none;
 padding:10px 20px;
 border-radius:8px;
 cursor:pointer;
 font-size:16px;
-transition:0.3s;
+transition:.3s;
 }
 
 button:hover{
 background:#6d28d9;
 }
 
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:50px 20px;
+background:#111827;
+}
+
+.stat-box{
+background:#1f2937;
+padding:25px;
+text-align:center;
+border-radius:15px;
+transition:.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-8px);
+box-shadow:0 8px 20px rgba(139,92,246,.4);
+}
+
+.stat-box h2{
+font-size:38px;
+color:#8b5cf6;
+margin-bottom:10px;
+}
+
+.stat-box p{
+color:#d1d5db;
+}
+
 footer{
 background:#161b22;
 text-align:center;
 padding:30px;
-margin-top:40px;
 color:#c9d1d9;
+margin-top:40px;
 }
 
-@media (max-width:768px){
+@media(max-width:768px){
 
 .header{
 flex-direction:column;
@@ -156,41 +212,4 @@ font-size:16px;
 #search{
 width:95%;
 }
-
 }
-.card img{
-width:60px;
-height:60px;
-margin-bottom:15px;
-}
-
-.badge{
-display:inline-block;
-padding:5px 10px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:10px;
-}
-
-.free{
-background:#16a34a;
-color:white;
-}
-
-.paid{
-background:#dc2626;
-color:white;
-}
-<section class="hero">
-...
-</section>
-
-<!-- 👇 Inga Stats section paste pannu -->
-<section class="stats">
-...
-</section>
-
-<section id="tools">
-...
-</section>
