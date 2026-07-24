@@ -1,23 +1,23 @@
 function searchTools() {
-    const input = document.getElementById("search").value.toLowerCase();
-    const cards = document.querySelectorAll(".card");
 
-    cards.forEach(card => {
-        const title = card.querySelector("h3")
-            ? card.querySelector("h3").innerText.toLowerCase()
-            : "";
+    let input = document.getElementById("search").value.toLowerCase();
 
-        const text = card.innerText.toLowerCase();
+    let cards = document.getElementsByClassName("card");
 
-        if (title.includes(input) || text.includes(input)) {
-            card.style.display = "";
-        } else {
-            card.style.display = "none";
+    for (let i = 0; i < cards.length; i++) {
+
+        let title = cards[i].getElementsByTagName("h3")[0];
+
+        if (title) {
+
+            let text = title.innerText.toLowerCase();
+
+            if (text.indexOf(input) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
+            }
+
         }
-    });
+    }
 }
-
-// Welcome message
-window.onload = function () {
-    console.log("Welcome to AI Genie Pro 🚀");
-};
