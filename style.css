@@ -286,3 +286,30 @@ width:100%;
     transform:scale(1.1);
     transition:0.3s;
 }
+#themeToggle{
+padding:10px 18px;
+border:none;
+border-radius:8px;
+background:#38bdf8;
+color:white;
+font-weight:bold;
+cursor:pointer;
+margin-left:20px;
+}
+
+.light-mode{
+background:#f8fafc;
+color:#111827;
+}
+
+.light-mode .header,
+.light-mode footer,
+.light-mode #contact{
+background:#e2e8f0;
+}
+
+.light-mode .card,
+.light-mode .stat-box{
+background:white;
+color:#111827;
+}
