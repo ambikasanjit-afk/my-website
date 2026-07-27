@@ -45,8 +45,23 @@ this.innerHTML="🤍";
 });
 
 });
-function filterTools(category){
-alert("Category filter will be connected in the next version.");
+function filterTools(category) {
+
+    const cards = document.querySelectorAll(".card");
+
+    cards.forEach(card => {
+
+        if (category === "all") {
+            card.style.display = "";
+        } else if (card.dataset.category === category) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    updateToolCount();
 }
 function updateToolCount() {
     const visibleCards = document.querySelectorAll(
