@@ -348,3 +348,10 @@ transition:.3s;
 .filters button:hover{
 background:#0284c7;
 }
+#toolCount{
+text-align:center;
+margin:20px;
+font-size:18px;
+font-weight:bold;
+color:#38bdf8;
+}
