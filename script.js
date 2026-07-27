@@ -60,3 +60,4 @@ function updateToolCount() {
 window.onload = function () {
     updateToolCount();
 };
+updateToolCount();
