@@ -32,3 +32,16 @@ themeToggle.addEventListener("click", function () {
         themeToggle.innerHTML = "🌙 Dark Mode";
     }
 });
+document.querySelectorAll(".fav-btn").forEach(button => {
+
+button.addEventListener("click", function(){
+
+if(this.innerHTML==="🤍"){
+this.innerHTML="❤️";
+}else{
+this.innerHTML="🤍";
+}
+
+});
+
+});
