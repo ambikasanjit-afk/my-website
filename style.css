@@ -313,3 +313,16 @@ background:#e2e8f0;
 background:white;
 color:#111827;
 }
+.fav-btn{
+float:right;
+border:none;
+background:none;
+font-size:22px;
+cursor:pointer;
+margin-bottom:10px;
+transition:0.3s;
+}
+
+.fav-btn:hover{
+transform:scale(1.2);
+}
