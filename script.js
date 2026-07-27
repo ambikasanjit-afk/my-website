@@ -48,3 +48,15 @@ this.innerHTML="🤍";
 function filterTools(category){
 alert("Category filter will be connected in the next version.");
 }
+function updateToolCount() {
+    const visibleCards = document.querySelectorAll(
+        ".card[style=''], .card:not([style]), .card[style='display: block;']"
+    );
+
+    document.getElementById("toolCount").innerHTML =
+        "Showing " + visibleCards.length + " AI Tools";
+}
+
+window.onload = function () {
+    updateToolCount();
+};
