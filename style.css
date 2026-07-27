@@ -326,3 +326,25 @@ transition:0.3s;
 .fav-btn:hover{
 transform:scale(1.2);
 }
+.filters{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin:20px 0;
+}
+
+.filters button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#38bdf8;
+color:white;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+.filters button:hover{
+background:#0284c7;
+}
