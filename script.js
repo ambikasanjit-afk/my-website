@@ -45,3 +45,6 @@ this.innerHTML="🤍";
 });
 
 });
+function filterTools(category){
+alert("Category filter will be connected in the next version.");
+}
