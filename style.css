@@ -1,4 +1,28 @@
-*{
+.badge{
+display:inline-block;
+background:#22c55e;
+color:white;
+padding:5px 12px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin:8px 0;
+}
+
+.rating{
+color:#facc15;
+font-size:15px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.card{
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.03);
+}*{
 margin:0;
 padding:0;
 box-sizing:border-box;
