@@ -145,3 +145,19 @@ function toggleFavorite(button){
     }
 
 }
+function openModal(title, description, link){
+
+    document.getElementById("modalTitle").innerText = title;
+
+    document.getElementById("modalDescription").innerText = description;
+
+    document.getElementById("modalLink").href = link;
+
+    document.getElementById("toolModal").style.display = "block";
+}
+
+function closeModal(){
+
+    document.getElementById("toolModal").style.display = "none";
+
+}
