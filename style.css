@@ -499,3 +499,8 @@ font-weight:bold;
 #topBtn:hover {
   background: #0056b3;
 }
+.rating {
+  color: gold;
+  font-weight: bold;
+  margin: 8px 0;
+}
