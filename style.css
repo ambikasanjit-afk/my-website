@@ -415,4 +415,42 @@ width:100%;
 }
 
 }
+.hero-buttons{
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.primary-btn,
+.secondary-btn{
+padding:14px 28px;
+border:none;
+border-radius:10px;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+
+.primary-btn{
+background:#38bdf8;
+color:white;
+}
+
+.primary-btn:hover{
+background:#0284c7;
+transform:translateY(-3px);
+}
+
+.secondary-btn{
+background:white;
+color:#111827;
+}
+
+.secondary-btn:hover{
+background:#e2e8f0;
+transform:translateY(-3px);
+}
 
