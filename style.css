@@ -292,3 +292,10 @@ nav{
 }
 
 }
+.day-card img{
+    width:150px;
+    height:150px;
+    object-fit:contain;
+    display:block;
+    margin:20px auto;
+}
