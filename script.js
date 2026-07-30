@@ -1,99 +1,121 @@
-function searchTools() {
+/* ---------------- Loader ---------------- */
 
-    let input = document.getElementById("search").value.toLowerCase();
+window.addEventListener("load", function () {
+    setTimeout(function () {
+        document.getElementById("loader").style.display = "none";
+    }, 1500);
+});
 
-    let cards = document.getElementsByClassName("card");
+/* ---------------- Dark Mode ---------------- */
 
-    for (let i = 0; i < cards.length; i++) {
-
-        let title = cards[i].getElementsByTagName("h3")[0];
-
-        if (title) {
-
-            let text = title.innerText.toLowerCase();
-
-            if (text.indexOf(input) > -1) {
-                cards[i].style.display = "";
-            } else {
-                cards[i].style.display = "none";
-            }
-
-        }
-    }
-}
 const themeToggle = document.getElementById("themeToggle");
 
 themeToggle.addEventListener("click", function () {
-    document.body.classList.toggle("light-mode");
 
-    if (document.body.classList.contains("light-mode")) {
-        themeToggle.innerHTML = "🌞 Light Mode";
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+
+        themeToggle.innerHTML = "☀️ Light Mode";
+
     } else {
+
         themeToggle.innerHTML = "🌙 Dark Mode";
+
     }
+
 });
-document.querySelectorAll(".fav-btn").forEach(button => {
 
-button.addEventListener("click", function(){
+/* ---------------- Back To Top ---------------- */
 
-if(this.innerHTML==="🤍"){
-this.innerHTML="❤️";
-}else{
-this.innerHTML="🤍";
+const topBtn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+
+    if (
+        document.body.scrollTop > 200 ||
+        document.documentElement.scrollTop > 200
+    ) {
+
+        topBtn.style.display = "block";
+
+    } else {
+
+        topBtn.style.display = "none";
+
+    }
+
+};
+
+function topFunction() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
 }
 
-});
+/* ---------------- Search ---------------- */
 
-});
-function filterTools(category) {
+function searchTools() {
 
-    const cards = document.querySelectorAll(".card");
+    let input = document
+        .getElementById("searchInput")
+        .value
+        .toLowerCase();
 
-    cards.forEach(card => {
+    let cards = document.querySelectorAll(".tool-card");
 
-        if (category === "all") {
-            card.style.display = "";
-        } else if (card.dataset.category === category) {
-            card.style.display = "";
+    cards.forEach(function (card) {
+
+        let text = card.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+            card.style.display = "block";
+
         } else {
+
             card.style.display = "none";
+
         }
 
     });
 
-    updateToolCount();
-}
-function updateToolCount() {
-    const visibleCards = document.querySelectorAll(
-        ".card[style=''], .card:not([style]), .card[style='display: block;']"
-    );
-
-    document.getElementById("toolCount").innerHTML =
-        "Showing " + visibleCards.length + " AI Tools";
 }
 
-window.onload = function () {
-    updateToolCount();
-};
-updateToolCount();
-window.addEventListener("load", function () {
-  setTimeout(() => {
-    document.getElementById("loader").style.display = "none";
-  }, 1500);
+/* ---------------- Scroll Animation ---------------- */
+
+const cards = document.querySelectorAll(".tool-card");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.style.opacity = "1";
+
+            entry.target.style.transform = "translateY(0)";
+
+        }
+
+    });
+
 });
-const topBtn = document.getElementById("topBtn");
 
-window.onscroll = function () {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    topBtn.style.display = "block";
-  } else {
-    topBtn.style.display = "none";
-  }
-};
+cards.forEach(card => {
 
-function topFunction() {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-}
+    card.style.opacity = "0";
+
+    card.style.transform = "translateY(40px)";
+
+    card.style.transition = "0.6s";
+
+    observer.observe(card);
+
+});
