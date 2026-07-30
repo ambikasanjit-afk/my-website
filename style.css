@@ -312,3 +312,14 @@ nav{
     border-radius:10px;
     font-size:16px;
 }
+.fav-btn{
+    float:right;
+    border:none;
+    background:none;
+    font-size:24px;
+    cursor:pointer;
+}
+
+.fav-btn:hover{
+    transform:scale(1.2);
+}
