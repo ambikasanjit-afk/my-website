@@ -136,3 +136,12 @@ function filterTools(category) {
     });
 
 }
+function toggleFavorite(button){
+
+    if(button.innerHTML==="🤍"){
+        button.innerHTML="❤️";
+    }else{
+        button.innerHTML="🤍";
+    }
+
+}
