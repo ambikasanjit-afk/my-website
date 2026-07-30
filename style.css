@@ -453,4 +453,15 @@ color:#111827;
 background:#e2e8f0;
 transform:translateY(-3px);
 }
-
+.popular::before{
+content:"🔥 POPULAR";
+position:absolute;
+top:15px;
+left:15px;
+background:#ef4444;
+color:#fff;
+padding:5px 10px;
+border-radius:20px;
+font-size:11px;
+font-weight:bold;
+}
