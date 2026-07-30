@@ -1,61 +1,53 @@
-.badge{
-display:inline-block;
-background:#22c55e;
-color:white;
-padding:5px 12px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-margin:8px 0;
-}
+/* =========================
+   AI GENIE PRO - STYLE.CSS
+   PART 1
+========================= */
 
-.rating{
-color:#facc15;
-font-size:15px;
-font-weight:bold;
-margin-bottom:12px;
-}
-
-.card{
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-10px) scale(1.03);
-}*{
+*{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
 background:#0f172a;
-color:white;
+color:#fff;
 line-height:1.6;
 }
 
+/* Header */
+
 .header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 8%;
-background:#111827;
 position:sticky;
 top:0;
 z-index:1000;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:#111827;
+box-shadow:0 5px 20px rgba(0,0,0,.25);
 }
 
 .logo{
-font-size:28px;
+font-size:30px;
 font-weight:bold;
 color:#38bdf8;
 }
 
+nav{
+display:flex;
+gap:18px;
+}
+
 nav a{
-color:white;
 text-decoration:none;
-margin-left:20px;
+color:white;
 font-weight:bold;
 transition:.3s;
 }
@@ -63,6 +55,25 @@ transition:.3s;
 nav a:hover{
 color:#38bdf8;
 }
+
+/* Dark Button */
+
+#themeToggle{
+padding:10px 18px;
+border:none;
+border-radius:10px;
+background:#38bdf8;
+color:white;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+}
+
+#themeToggle:hover{
+background:#0ea5e9;
+}
+
+/* Hero */
 
 .hero{
 text-align:center;
@@ -76,86 +87,155 @@ margin-bottom:20px;
 }
 
 .hero p{
-font-size:20px;
+font-size:19px;
+max-width:800px;
+margin:auto;
 margin-bottom:30px;
 }
 
+/* Search */
+
 #search{
-width:80%;
-max-width:500px;
+width:90%;
+max-width:520px;
 padding:15px;
 border:none;
-border-radius:10px;
-font-size:18px;
 outline:none;
+border-radius:12px;
+font-size:18px;
 }
 
-.stats{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-padding:50px 8%;
+/* Filter Buttons */
+
+.filters{
+display:flex;
+justify-content:center;
+gap:10px;
+flex-wrap:wrap;
+margin-top:20px;
 }
 
-.stat-box{
-background:#1e293b;
-padding:30px;
-border-radius:15px;
-text-align:center;
+.filters button{
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:#38bdf8;
+color:white;
+font-weight:bold;
+cursor:pointer;
 transition:.3s;
 }
 
-.stat-box:hover{
-transform:translateY(-8px);
-background:#334155;
+.filters button:hover{
+background:#0284c7;
 }
 
-.stat-box h2{
-font-size:36px;
-color:#38bdf8;
-margin-bottom:10px;
-}
+/* Tool Counter */
 
-section h2{
+#toolCount{
+margin-top:20px;
+font-size:18px;
+font-weight:bold;
+color:#facc15;
 text-align:center;
-margin:40px 0 20px;
-font-size:35px;
 }
+/* =========================
+   CARDS
+========================= */
 
 .cards{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:25px;
-padding:20px 8%;
+padding:40px 8%;
 }
 
 .card{
+position:relative;
 background:#1e293b;
 padding:25px;
-border-radius:15px;
+border-radius:18px;
 text-align:center;
-transition:.3s;
+transition:.35s;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 0 20px rgba(56,189,248,.4);
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(56,189,248,.35);
+}
+
+.card img{
+width:70px;
+height:70px;
+object-fit:contain;
+margin:0 auto 15px;
+display:block;
 }
 
 .card h3{
+font-size:28px;
 margin-bottom:10px;
-font-size:24px;
 }
 
 .card p{
-margin-bottom:20px;
 color:#cbd5e1;
+margin-top:12px;
+margin-bottom:18px;
+}
+
+/* Favorite Button */
+
+.fav-btn{
+position:absolute;
+top:15px;
+right:15px;
+width:42px;
+height:42px;
+border:none;
+border-radius:10px;
+background:#38bdf8;
+color:white;
+font-size:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+.fav-btn:hover{
+transform:scale(1.1);
+}
+
+/* FREE Badge */
+
+.badge{
+display:inline-block;
+padding:6px 14px;
+background:#22c55e;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+/* Rating */
+
+.rating{
+font-size:16px;
+font-weight:bold;
+color:#facc15;
+margin-bottom:15px;
+}
+
+/* Open Button */
+
+.card a{
+text-decoration:none;
 }
 
 .card button{
-padding:12px 25px;
+padding:12px 26px;
 border:none;
-border-radius:8px;
+border-radius:10px;
 background:#38bdf8;
 color:white;
 font-size:16px;
@@ -165,137 +245,75 @@ transition:.3s;
 
 .card button:hover{
 background:#0284c7;
+transform:scale(1.05);
 }
+
+/* Section Titles */
+
+section h2{
+text-align:center;
+font-size:38px;
+margin-top:50px;
+margin-bottom:20px;
+}
+/* =========================
+   STATS
+========================= */
+
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+padding:40px 8%;
+}
+
+.stat-box{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+text-align:center;
+transition:.3s;
+}
+
+.stat-box:hover{
+transform:translateY(-6px);
+}
+
+.stat-box h2{
+font-size:32px;
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
 #contact{
+background:#111827;
 padding:60px 20px;
 text-align:center;
-background:#111827;
 }
 
 #contact p{
 margin:10px 0;
-font-size:18px;
 color:#cbd5e1;
 }
+
+/* =========================
+   FOOTER
+========================= */
 
 footer{
 background:#020617;
 padding:20px;
 text-align:center;
-font-size:15px;
 color:#94a3b8;
 }
 
-html{
-scroll-behavior:smooth;
-}
-
-@media(max-width:768px){
-
-.header{
-flex-direction:column;
-padding:20px;
-}
-
-nav{
-margin-top:15px;
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-nav a{
-margin:8px;
-}
-
-.hero h1{
-font-size:34px;
-}
-
-.hero p{
-font-size:17px;
-}
-
-#search{
-width:95%;
-}
-
-.cards{
-grid-template-columns:1fr;
-padding:20px;
-}
-
-.stats{
-grid-template-columns:1fr 1fr;
-padding:20px;
-}
-
-.stat-box h2{
-font-size:28px;
-}
-
-section h2{
-font-size:28px;
-}
-
-}
-
-@media(max-width:480px){
-
-.stats{
-grid-template-columns:1fr;
-}
-
-.hero{
-padding:60px 15px;
-}
-
-.hero h1{
-font-size:28px;
-}
-
-.hero p{
-font-size:15px;
-}
-
-.logo{
-font-size:22px;
-}
-
-.card{
-padding:20px;
-}
-
-.card h3{
-font-size:20px;
-}
-
-.card button{
-width:100%;
-}
-
-}
-.card img{
-    width:60px;
-    height:60px;
-    margin:0 auto 15px;
-    display:block;
-}
-
-.card img:hover{
-    transform:scale(1.1);
-    transition:0.3s;
-}
-#themeToggle{
-padding:10px 18px;
-border:none;
-border-radius:8px;
-background:#38bdf8;
-color:white;
-font-weight:bold;
-cursor:pointer;
-margin-left:20px;
-}
+/* =========================
+   LIGHT MODE
+========================= */
 
 .light-mode{
 background:#f8fafc;
@@ -310,48 +328,91 @@ background:#e2e8f0;
 
 .light-mode .card,
 .light-mode .stat-box{
-background:white;
+background:#ffffff;
 color:#111827;
 }
-.fav-btn{
-float:right;
-border:none;
-background:none;
-font-size:22px;
-cursor:pointer;
-margin-bottom:10px;
-transition:0.3s;
+
+.light-mode .card p,
+.light-mode #contact p{
+color:#475569;
 }
 
-.fav-btn:hover{
-transform:scale(1.2);
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.header{
+flex-direction:column;
+gap:15px;
+padding:20px;
 }
-.filters{
-display:flex;
-justify-content:center;
-gap:10px;
+
+nav{
 flex-wrap:wrap;
-margin:20px 0;
+justify-content:center;
+gap:12px;
 }
 
-.filters button{
-padding:10px 20px;
-border:none;
-border-radius:20px;
-background:#38bdf8;
-color:white;
-cursor:pointer;
-font-weight:bold;
-transition:.3s;
+.hero h1{
+font-size:34px;
 }
 
-.filters button:hover{
-background:#0284c7;
+.hero p{
+font-size:16px;
 }
-#toolCount{
-text-align:center;
-margin:20px;
-font-size:18px;
-font-weight:bold;
-color:#38bdf8;
+
+.cards{
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+padding:20px;
 }
+
+.card{
+padding:20px;
+}
+
+.card h3{
+font-size:22px;
+}
+
+.card img{
+width:60px;
+height:60px;
+}
+
+.stats{
+grid-template-columns:repeat(2,1fr);
+padding:20px;
+}
+
+}
+
+@media(max-width:480px){
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.stats{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.logo{
+font-size:24px;
+}
+
+#themeToggle{
+width:100%;
+}
+
+}
+
