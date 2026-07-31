@@ -1,163 +1,195 @@
-/* ---------------- Loader ---------------- */
+/* ==========================
+   LOADER
+========================== */
 
-window.addEventListener("load", function () {
-    setTimeout(function () {
-        document.getElementById("loader").style.display = "none";
-    }, 1500);
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    setTimeout(() => {
+        loader.style.display = "none";
+    }, 1200);
 });
 
-/* ---------------- Dark Mode ---------------- */
+/* ==========================
+   DARK MODE
+========================== */
 
 const themeToggle = document.getElementById("themeToggle");
 
-themeToggle.addEventListener("click", function () {
+themeToggle.addEventListener("click", () => {
 
     document.body.classList.toggle("dark");
 
-    if (document.body.classList.contains("dark")) {
-
-        themeToggle.innerHTML = "☀️ Light Mode";
-
-    } else {
-
-        themeToggle.innerHTML = "🌙 Dark Mode";
-
+    if(document.body.classList.contains("dark")){
+        themeToggle.innerHTML = "☀";
+    }else{
+        themeToggle.innerHTML = "🌙";
     }
 
 });
 
-/* ---------------- Back To Top ---------------- */
+/* ==========================
+   SEARCH
+========================== */
 
-const topBtn = document.getElementById("topBtn");
+function searchTools(){
 
-window.onscroll = function () {
+    let input = document.getElementById("searchInput").value.toLowerCase();
 
-    if (
-        document.body.scrollTop > 200 ||
-        document.documentElement.scrollTop > 200
-    ) {
+    let cards = document.querySelectorAll(".tool-card");
 
-        topBtn.style.display = "block";
+    cards.forEach(card=>{
 
-    } else {
+        let text = card.innerText.toLowerCase();
 
-        topBtn.style.display = "none";
+        if(text.includes(input)){
+            card.style.display="block";
+        }else{
+            card.style.display="none";
+        }
+
+    });
+
+}
+
+/* ==========================
+   BACK TO TOP
+========================== */
+
+const topBtn=document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+    if(document.body.scrollTop>300 || document.documentElement.scrollTop>300){
+
+        topBtn.style.display="block";
+
+    }else{
+
+        topBtn.style.display="none";
 
     }
 
 };
 
-function topFunction() {
+function topFunction(){
 
     window.scrollTo({
 
-        top: 0,
+        top:0,
 
-        behavior: "smooth"
+        behavior:"smooth"
 
     });
 
 }
+/* ==========================
+   CATEGORY FILTER
+========================== */
 
-/* ---------------- Search ---------------- */
+function filterTools(category){
 
-function searchTools() {
+    const cards = document.querySelectorAll(".tool-card");
 
-    let input = document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase();
+    cards.forEach(card=>{
 
-    let cards = document.querySelectorAll(".tool-card");
-
-    cards.forEach(function (card) {
-
-        let text = card.innerText.toLowerCase();
-
-        if (text.includes(input)) {
-
-            card.style.display = "block";
-
-        } else {
-
-            card.style.display = "none";
-
+        if(category==="all"){
+            card.style.display="block";
+        }
+        else if(card.classList.contains(category)){
+            card.style.display="block";
+        }
+        else{
+            card.style.display="none";
         }
 
     });
 
 }
 
-/* ---------------- Scroll Animation ---------------- */
+/* ==========================
+   TOOL DETAILS MODAL
+========================== */
+
+const modal = document.getElementById("toolModal");
+const modalTitle = document.getElementById("modalTitle");
+const modalDescription = document.getElementById("modalDescription");
+const modalLink = document.getElementById("modalLink");
+
+function openModal(title, description, link){
+
+    modalTitle.innerText = title;
+    modalDescription.innerText = description;
+    modalLink.href = link;
+
+    modal.style.display = "block";
+}
+
+function closeModal(){
+    modal.style.display = "none";
+}
+
+window.addEventListener("click",(e)=>{
+    if(e.target===modal){
+        closeModal();
+    }
+});
+
+/* ==========================
+   SCROLL ANIMATION
+========================== */
 
 const cards = document.querySelectorAll(".tool-card");
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver((entries)=>{
 
-    entries.forEach(entry => {
+    entries.forEach(entry=>{
 
-        if (entry.isIntersecting) {
+        if(entry.isIntersecting){
 
-            entry.target.style.opacity = "1";
-
-            entry.target.style.transform = "translateY(0)";
+            entry.target.style.opacity="1";
+            entry.target.style.transform="translateY(0)";
 
         }
 
     });
 
+},{
+    threshold:0.2
 });
 
-cards.forEach(card => {
+cards.forEach(card=>{
 
-    card.style.opacity = "0";
-
-    card.style.transform = "translateY(40px)";
-
-    card.style.transition = "0.6s";
+    card.style.opacity="0";
+    card.style.transform="translateY(40px)";
+    card.style.transition="0.6s";
 
     observer.observe(card);
 
 });
-function filterTools(category) {
 
-    const cards = document.querySelectorAll(".tool-card");
+/* ==========================
+   FAVORITES (LOCAL STORAGE)
+========================== */
 
-    cards.forEach(card => {
+document.querySelectorAll(".fav-btn").forEach((btn, index) => {
 
-        if (category === "all") {
-            card.style.display = "block";
-        } else if (card.classList.contains(category)) {
-            card.style.display = "block";
+    const key = "favorite_" + index;
+
+    if (localStorage.getItem(key) === "true") {
+        btn.innerHTML = "❤️";
+    }
+
+    btn.addEventListener("click", () => {
+
+        if (btn.innerHTML === "🤍") {
+            btn.innerHTML = "❤️";
+            localStorage.setItem(key, "true");
         } else {
-            card.style.display = "none";
+            btn.innerHTML = "🤍";
+            localStorage.setItem(key, "false");
         }
 
     });
 
-}
-function toggleFavorite(button){
-
-    if(button.innerHTML==="🤍"){
-        button.innerHTML="❤️";
-    }else{
-        button.innerHTML="🤍";
-    }
-
-}
-function openModal(title, description, link){
-
-    document.getElementById("modalTitle").innerText = title;
-
-    document.getElementById("modalDescription").innerText = description;
-
-    document.getElementById("modalLink").href = link;
-
-    document.getElementById("toolModal").style.display = "block";
-}
-
-function closeModal(){
-
-    document.getElementById("toolModal").style.display = "none";
-
-}
+});
