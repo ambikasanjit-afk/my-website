@@ -473,3 +473,16 @@ body.dark .header{
         width:95%;
     }
 }
+/* ==========================
+   TOP RATED
+========================== */
+
+.top-rated{
+    padding:80px 8%;
+}
+
+.top-rated h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
