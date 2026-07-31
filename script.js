@@ -193,3 +193,15 @@ document.querySelectorAll(".fav-btn").forEach((btn, index) => {
     });
 
 });
+/* ==========================
+   MOBILE MENU
+========================== */
+
+function toggleMenu(){
+
+    document
+        .getElementById("navbar")
+        .classList
+        .toggle("show");
+
+}
