@@ -1,381 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AI Genie Pro - Discover the Best AI Tools</title>
+<meta charset="UTF-8">
 
-    <meta name="description"
-        content="Discover the best AI tools for Coding, Writing, Images, Videos and Productivity.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="keywords"
-        content="AI Tools, ChatGPT, Gemini, Claude, AI Directory">
+<title>Future AI | 25+ Trending AI Tools</title>
 
-    <meta name="author" content="Sanju">
+<meta name="description" content="Discover the best AI tools without login.">
 
-    <meta property="og:title" content="AI Genie Pro">
-    <meta property="og:description"
-        content="Find the best AI tools in one place.">
-    <meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div id="loader">
-    <div class="loader-circle"></div>
-    <h2>🤖 AI Genie Pro</h2>
-    <p>Loading AI Tools...</p>
+<div class="cursor-glow"></div>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<i class="fa-solid fa-microchip"></i>
+
+<span>Future AI</span>
+
 </div>
 
-<header class="header">
+<ul>
 
-    <div class="logo">
-        🤖 AI Genie Pro
-    </div>
+<li><a href="#home">Home</a></li>
 
-    <nav>
+<li><a href="#tools">AI Tools</a></li>
 
-        <a href="#home">Home</a>
-        <a href="#featured">Featured</a>
-        <a href="#categories">Categories</a>
-        <a href="#contact">Contact</a>
+<li><a href="#featured">Featured</a></li>
 
-    </nav>
+<li><a href="#contact">Contact</a></li>
 
-    <button id="themeToggle">
-        🌙
-    </button>
+</ul>
 
-</header>
+<a href="#tools" class="nav-btn">Explore</a>
+
+</nav>
 
 <section id="home" class="hero">
 
-    <div class="hero-content">
+<div class="gradient-bg"></div>
 
-        <h1>
-            Discover the Future of AI 🚀
-        </h1>
+<div class="hero-content">
 
-        <p>
-            Explore powerful AI tools for Coding,
-            Writing,
-            Image Generation,
-            Video Editing,
-            Productivity,
-            Music,
-            Business,
-            Marketing and much more.
-        </p>
+<h1>
 
-        <div class="hero-buttons">
+Discover The
 
-            <a href="#featured" class="btn">
-                🔍 Explore Tools
-            </a>
+<span>Future of AI</span>
 
-            <a href="#categories" class="btn secondary">
-                📂 Categories
-            </a>
+</h1>
 
-        </div>
+<p>
 
-        <div class="search-box">
+Explore 25+ Trending Artificial Intelligence Tools
 
-            <input
-                type="text"
-                id="searchInput"
-                placeholder="Search AI tools..."
-                onkeyup="searchTools()">
+Without Login.
 
-        </div>
+Fast.
 
-    </div>
+Free.
 
-</section>
-<!-- ================= FEATURED TOOLS ================= -->
+Beautiful.
 
-<section id="featured" class="featured">
+</p>
 
-    <h2>🔥 Featured AI Tools</h2>
+<div class="hero-buttons">
 
-    <div class="tool-grid">
+<a href="#tools" class="btn-primary">
 
-        <div class="tool-card coding">
-            <img src="images/chatgpt.png" alt="ChatGPT">
-            <h3>ChatGPT</h3>
-            <span class="badge free">FREE</span>
-            <p>AI assistant for coding, writing and learning.</p>
-            <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-            <a href="https://chatgpt.com" target="_blank" class="btn">Open</a>
-        </div>
+Explore Tools
 
-        <div class="tool-card writing">
-            <img src="images/gemini.png" alt="Gemini">
-            <h3>Gemini</h3>
-            <span class="badge free">FREE</span>
-            <p>Google's latest AI assistant.</p>
-            <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-            <a href="https://gemini.google.com" target="_blank" class="btn">Open</a>
-        </div>
+</a>
 
-        <div class="tool-card coding">
-            <img src="images/copilot.png" alt="GitHub Copilot">
-            <h3>GitHub Copilot</h3>
-            <span class="badge paid">PAID</span>
-            <p>AI coding assistant.</p>
-            <div class="rating">⭐⭐⭐⭐⭐ 4.9</div>
-            <a href="https://github.com/features/copilot" target="_blank" class="btn">Open</a>
-        </div>
+<a href="#featured" class="btn-secondary">
 
-        <div class="tool-card image">
-            <img src="images/midjourney.png" alt="Midjourney">
-            <h3>Midjourney</h3>
-            <span class="badge paid">PAID</span>
-            <p>Create stunning AI artwork.</p>
-            <div class="rating">⭐⭐⭐⭐⭐ 4.8</div>
-            <a href="https://www.midjourney.com" target="_blank" class="btn">Open</a>
-        </div>
+Watch Demo
 
-    </div>
-
-</section>
-
-<!-- ================= CATEGORIES ================= -->
-
-<section id="categories">
-
-<h2>📂 Categories</h2>
-
-<div class="categories">
-
-<button onclick="filterTools('all')">All</button>
-
-<button onclick="filterTools('coding')">Coding</button>
-
-<button onclick="filterTools('writing')">Writing</button>
-
-<button onclick="filterTools('image')">Image AI</button>
-
-<button onclick="filterTools('video')">Video AI</button>
-
-<button onclick="filterTools('music')">Music AI</button>
-
-<button onclick="filterTools('productivity')">Productivity</button>
+</a>
 
 </div>
 
-</section>
-
-<!-- ================= STATS ================= -->
-
-<section class="stats">
-
-<div class="stat-box">
-<h2>500+</h2>
-<p>AI Tools</p>
 </div>
 
-<div class="stat-box">
-<h2>100K+</h2>
-<p>Monthly Users</p>
-</div>
+<div class="scroll-down">
 
-<div class="stat-box">
-<h2>50+</h2>
-<p>Categories</p>
-</div>
-
-<div class="stat-box">
-<h2>4.9⭐</h2>
-<p>Average Rating</p>
-</div>
-
-</section>
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-    <h2>📞 Contact Us</h2>
-
-    <p>
-        Have suggestions for new AI tools?
-        We'd love to hear from you!
-    </p>
-
-    <a href="mailto:support@aigeniepro.com" class="btn">
-        Contact
-    </a>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <h2>🤖 AI Genie Pro</h2>
-
-        <p>
-            Discover the best AI tools in one place.
-        </p>
-
-        <div class="footer-links">
-
-            <a href="#home">Home</a>
-
-            <a href="#featured">Featured</a>
-
-            <a href="#categories">Categories</a>
-
-            <a href="#contact">Contact</a>
-
-        </div>
-
-        <p class="copyright">
-            © 2026 AI Genie Pro. All Rights Reserved.
-        </p>
-
-    </div>
-
-</footer>
-
-<!-- ================= BACK TO TOP ================= -->
-
-<button id="topBtn" onclick="topFunction()">
-⬆
-</button>
-
-<!-- ================= TOOL DETAILS MODAL ================= -->
-
-<div id="toolModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close"
-        onclick="closeModal()">&times;</span>
-
-        <h2 id="modalTitle">
-            Tool Name
-        </h2>
-
-        <p id="modalDescription">
-            Tool Description
-        </p>
-
-        <a id="modalLink"
-        href="#"
-        target="_blank"
-        class="btn">
-            Visit Website
-        </a>
-
-    </div>
+<i class="fa-solid fa-angles-down"></i>
 
 </div>
-
-<!-- ================= JAVASCRIPT ================= -->
-
-<script src="script.js"></script>
-
-</body>
-</html>
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact">
-
-    <h2>📞 Contact</h2>
-
-    <p>Have a suggestion for a new AI tool?</p>
-
-    <a href="mailto:your@email.com" class="btn">
-        📧 Email Us
-    </a>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <p>© 2026 AI Genie Pro. All Rights Reserved.</p>
-
-    <p>
-        Made with ❤️ by Sanju
-    </p>
-
-</footer>
-
-<!-- ================= BACK TO TOP ================= -->
-
-<button id="topBtn" onclick="topFunction()">
-    ⬆
-</button>
-
-<!-- ================= TOOL DETAILS MODAL ================= -->
-
-<div id="toolModal" class="modal">
-
-    <div class="modal-content">
-
-        <span class="close" onclick="closeModal()">&times;</span>
-
-        <h2 id="modalTitle">Tool Name</h2>
-
-        <p id="modalDescription">
-            Tool description appears here...
-        </p>
-
-        <a id="modalLink"
-           href="#"
-           target="_blank"
-           class="btn">
-            Visit Tool
-        </a>
-
-    </div>
-
-</div>
-
-<script src="script.js"></script>
-
-</body>
-</html>
-<!-- ================= TOP RATED ================= -->
-
-<section class="top-rated">
-
-    <h2>🏆 Top Rated AI Tools</h2>
-
-    <div class="tool-grid">
-
-        <div class="tool-card writing">
-            <button class="fav-btn">🤍</button>
-            <img src="images/chatgpt.png" alt="ChatGPT">
-            <h3>ChatGPT</h3>
-            <p>⭐ 4.9/5</p>
-            <a href="https://chatgpt.com" target="_blank" class="btn">Visit</a>
-        </div>
-
-        <div class="tool-card writing">
-            <button class="fav-btn">🤍</button>
-            <img src="images/gemini.png" alt="Gemini">
-            <h3>Gemini</h3>
-            <p>⭐ 4.8/5</p>
-            <a href="https://gemini.google.com" target="_blank" class="btn">Visit</a>
-        </div>
-
-        <div class="tool-card coding">
-            <button class="fav-btn">🤍</button>
-            <img src="images/copilot.png" alt="GitHub Copilot">
-            <h3>GitHub Copilot</h3>
-            <p>⭐ 4.9/5</p>
-            <a href="https://github.com/features/copilot" target="_blank" class="btn">Visit</a>
-        </div>
-
-    </div>
 
 </section>
