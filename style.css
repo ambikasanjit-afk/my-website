@@ -1220,3 +1220,56 @@ z-index:-1;
 pointer-events:none;
 
 }
+/*==========================
+MAGNETIC BUTTONS
+==========================*/
+
+.primary-btn,
+.secondary-btn{
+
+position:relative;
+
+overflow:hidden;
+
+transition:.35s;
+
+}
+
+.primary-btn::before,
+.secondary-btn::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-40%;
+
+width:60%;
+
+height:300%;
+
+background:rgba(255,255,255,.35);
+
+transform:rotate(25deg);
+
+transition:.8s;
+
+}
+
+.primary-btn:hover::before,
+.secondary-btn:hover::before{
+
+left:130%;
+
+}
+
+.primary-btn:hover,
+.secondary-btn:hover{
+
+transform:translateY(-8px) scale(1.04);
+
+box-shadow:0 0 40px rgba(0,229,255,.45);
+
+}
