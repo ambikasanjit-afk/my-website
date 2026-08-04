@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ambikasanjit-afk.github.io/my-website/sitemap.xml
