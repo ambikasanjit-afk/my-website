@@ -1,11 +1,11 @@
-/*======================================
- FUTURE AI
+/*=========================================
+ FUTURE AI v2
  Premium JavaScript
-======================================*/
+=========================================*/
 
-// ===============================
+// ================================
 // LOADER
-// ===============================
+// ================================
 
 window.addEventListener("load", () => {
 
@@ -21,11 +21,11 @@ loader.style.visibility = "hidden";
 
 });
 
-// ===============================
+// ================================
 // AI TOOLS DATABASE
-// ===============================
+// ================================
 
-const tools=[
+const aiTools=[
 
 {
 name:"ChatGPT",
@@ -39,7 +39,7 @@ link:"https://chatgpt.com"
 name:"Claude",
 category:"Text",
 icon:"🧠",
-tagline:"Smart AI Chat",
+tagline:"AI Chat",
 link:"https://claude.ai"
 },
 
@@ -57,6 +57,14 @@ category:"Coding",
 icon:"💻",
 tagline:"Coding Assistant",
 link:"https://github.com/features/copilot"
+},
+
+{
+name:"DeepSeek",
+category:"Text",
+icon:"🚀",
+tagline:"AI Search",
+link:"https://www.deepseek.com"
 },
 
 {
@@ -87,7 +95,7 @@ link:"https://runwayml.com"
 name:"Pika",
 category:"Video",
 icon:"📹",
-tagline:"Create Videos",
+tagline:"AI Video",
 link:"https://pika.art"
 },
 
@@ -95,7 +103,7 @@ link:"https://pika.art"
 name:"ElevenLabs",
 category:"Voice",
 icon:"🎙️",
-tagline:"AI Voice",
+tagline:"Voice AI",
 link:"https://elevenlabs.io"
 },
 
@@ -103,7 +111,7 @@ link:"https://elevenlabs.io"
 name:"Suno",
 category:"Voice",
 icon:"🎵",
-tagline:"Music Generator",
+tagline:"Music AI",
 link:"https://suno.com"
 },
 
@@ -113,31 +121,23 @@ category:"Productivity",
 icon:"🔍",
 tagline:"AI Search",
 link:"https://www.perplexity.ai"
-},
-
-{
-name:"Notion AI",
-category:"Productivity",
-icon:"📒",
-tagline:"Notes AI",
-link:"https://www.notion.so/product/ai"
 }
 
 ];
 
-// ===============================
+// ================================
 // GENERATE TOOL CARDS
-// ===============================
+// ================================
 
-const toolsGrid=document.getElementById("toolsGrid");
+const grid=document.getElementById("toolsGrid");
 
-function displayTools(data){
+function loadTools(data){
 
-toolsGrid.innerHTML="";
+grid.innerHTML="";
 
 data.forEach(tool=>{
 
-toolsGrid.innerHTML+=`
+grid.innerHTML+=`
 
 <div class="tool-card">
 
@@ -147,17 +147,9 @@ ${tool.icon}
 
 </div>
 
-<h3>
+<h3>${tool.name}</h3>
 
-${tool.name}
-
-</h3>
-
-<p>
-
-${tool.tagline}
-
-</p>
+<p>${tool.tagline}</p>
 
 <a href="${tool.link}" target="_blank">
 
@@ -173,34 +165,40 @@ Explore
 
 }
 
-displayTools(tools);
-// ===============================
-// SEARCH
-// ===============================
+loadTools(aiTools);
+// ===================================
+// LIVE SEARCH
+// ===================================
 
-const searchInput=document.getElementById("searchInput");
+const searchInput = document.getElementById("searchInput");
+
+if(searchInput){
 
 searchInput.addEventListener("keyup",()=>{
 
-const value=searchInput.value.toLowerCase();
+const value = searchInput.value.toLowerCase();
 
-const filtered=tools.filter(tool=>
+const filtered = aiTools.filter(tool =>
 
-tool.name.toLowerCase().includes(value)||
+tool.name.toLowerCase().includes(value) ||
 
-tool.category.toLowerCase().includes(value)
+tool.category.toLowerCase().includes(value) ||
+
+tool.tagline.toLowerCase().includes(value)
 
 );
 
-displayTools(filtered);
+loadTools(filtered);
 
-initTilt();
+enableTilt();
 
 });
 
-// ===============================
+}
+
+// ===================================
 // CATEGORY FILTER
-// ===============================
+// ===================================
 
 const buttons=document.querySelectorAll(".categories button");
 
@@ -216,31 +214,31 @@ const category=button.innerText;
 
 if(category==="All"){
 
-displayTools(tools);
+loadTools(aiTools);
 
 }
 
 else{
 
-displayTools(
+loadTools(
 
-tools.filter(tool=>tool.category===category)
+aiTools.filter(tool=>tool.category===category)
 
 );
 
 }
 
-initTilt();
+enableTilt();
 
 });
 
 });
 
-// ===============================
+// ===================================
 // VANILLA TILT
-// ===============================
+// ===================================
 
-function initTilt(){
+function enableTilt(){
 
 VanillaTilt.init(
 
@@ -250,13 +248,13 @@ document.querySelectorAll(".tool-card"),
 
 max:15,
 
-speed:400,
+speed:500,
+
+scale:1.05,
 
 glare:true,
 
-"max-glare":0.3,
-
-scale:1.04
+"max-glare":0.3
 
 }
 
@@ -264,11 +262,11 @@ scale:1.04
 
 }
 
-initTilt();
+enableTilt();
 
-// ===============================
-// COUNTERS
-// ===============================
+// ===================================
+// COUNTER ANIMATION
+// ===================================
 
 const counters=document.querySelectorAll(".counter");
 
@@ -280,17 +278,15 @@ const target=+counter.dataset.target;
 
 const current=+counter.innerText;
 
-const increment=target/120;
+const increment=Math.ceil(target/120);
 
 if(current<target){
 
-counter.innerText=Math.ceil(current+increment);
+counter.innerText=current+increment;
 
 requestAnimationFrame(update);
 
-}
-
-else{
+}else{
 
 counter.innerText=target.toLocaleString()+"+";
 
@@ -301,64 +297,69 @@ counter.innerText=target.toLocaleString()+"+";
 update();
 
 });
-// ===============================
-// GSAP ANIMATIONS
-// ===============================
 
-gsap.registerPlugin(ScrollTrigger);
+// ===================================
+// GSAP HERO ANIMATION
+// ===================================
 
-gsap.from(".hero-left h1",{
-    y:100,
-    opacity:0,
-    duration:1.2
+gsap.from(".hero-content h1",{
+
+opacity:0,
+
+y:80,
+
+duration:1.2
+
 });
 
-gsap.from(".hero-left p",{
-    y:80,
-    opacity:0,
-    delay:0.3,
-    duration:1
+gsap.from(".hero-content p",{
+
+opacity:0,
+
+y:50,
+
+delay:.3,
+
+duration:1
+
 });
 
 gsap.from(".hero-buttons",{
-    y:60,
-    opacity:0,
-    delay:0.6,
-    duration:1
-});
 
-gsap.utils.toArray(".tool-card").forEach(card=>{
+opacity:0,
 
-    gsap.from(card,{
-        scrollTrigger:{
-            trigger:card,
-            start:"top 85%"
-        },
-        opacity:0,
-        y:80,
-        duration:0.8
-    });
+y:40,
+
+delay:.6,
+
+duration:1
 
 });
+/*==================================
+ FUTURE AI v2
+ Final Effects
+==================================*/
 
 // ===============================
-// NAVBAR EFFECT
+// NAVBAR SCROLL EFFECT
 // ===============================
 
-const navbar=document.querySelector(".navbar");
+const navbar = document.querySelector(".navbar");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-if(window.scrollY>50){
+    if (window.scrollY > 80) {
 
-navbar.style.background="rgba(4,7,15,.85)";
-navbar.style.backdropFilter="blur(25px)";
+        navbar.style.background = "rgba(5,8,22,.85)";
+        navbar.style.backdropFilter = "blur(20px)";
+        navbar.style.boxShadow = "0 10px 40px rgba(0,0,0,.4)";
 
-}else{
+    } else {
 
-navbar.style.background="rgba(255,255,255,.05)";
+        navbar.style.background = "rgba(255,255,255,.05)";
+        navbar.style.boxShadow = "none";
 
-}
+    }
 
 });
 
@@ -366,65 +367,80 @@ navbar.style.background="rgba(255,255,255,.05)";
 // THREE.JS HERO
 // ===============================
 
-const canvas=document.getElementById("hero-canvas");
+const canvas = document.getElementById("heroCanvas");
 
 if(canvas){
 
-const scene=new THREE.Scene();
+const scene = new THREE.Scene();
 
-const camera=new THREE.PerspectiveCamera(
+const camera = new THREE.PerspectiveCamera(
 75,
 canvas.clientWidth/canvas.clientHeight,
 0.1,
 1000
 );
 
-const renderer=new THREE.WebGLRenderer({
-canvas,
+const renderer = new THREE.WebGLRenderer({
+
+canvas:canvas,
 alpha:true,
 antialias:true
+
 });
+
+renderer.setPixelRatio(window.devicePixelRatio);
 
 renderer.setSize(
+
 canvas.clientWidth,
 canvas.clientHeight
+
 );
 
-const geometry=new THREE.IcosahedronGeometry(2,1);
+const geometry = new THREE.IcosahedronGeometry(2,2);
 
-const material=new THREE.MeshStandardMaterial({
+const material = new THREE.MeshStandardMaterial({
 
-color:0x00e5ff,
+color:0x00E5FF,
 
-wireframe:true
+wireframe:true,
+
+emissive:0x00E5FF,
+
+emissiveIntensity:.5
 
 });
 
-const mesh=new THREE.Mesh(
+const sphere = new THREE.Mesh(
+
 geometry,
 material
+
 );
 
-scene.add(mesh);
+scene.add(sphere);
 
-const light=new THREE.PointLight(
+const light = new THREE.PointLight(
+
 0xffffff,
+
 2
+
 );
 
 light.position.set(5,5,5);
 
 scene.add(light);
 
-camera.position.z=5;
+camera.position.z = 5;
 
 function animate(){
 
 requestAnimationFrame(animate);
 
-mesh.rotation.x+=0.003;
+sphere.rotation.x += .003;
 
-mesh.rotation.y+=0.004;
+sphere.rotation.y += .004;
 
 renderer.render(scene,camera);
 
@@ -434,14 +450,18 @@ animate();
 
 window.addEventListener("resize",()=>{
 
-camera.aspect=
-canvas.clientWidth/canvas.clientHeight;
+camera.aspect =
+
+canvas.clientWidth /
+canvas.clientHeight;
 
 camera.updateProjectionMatrix();
 
 renderer.setSize(
+
 canvas.clientWidth,
 canvas.clientHeight
+
 );
 
 });
@@ -449,13 +469,85 @@ canvas.clientHeight
 }
 
 // ===============================
-// SMOOTH SCROLL
+// SCROLL ANIMATION
 // ===============================
 
-document.querySelectorAll('a[href^="#"]').forEach(link=>{
+gsap.utils.toArray(
+
+".tool-card,.featured,.stat-card,.newsletter"
+
+).forEach(item=>{
+
+gsap.from(item,{
+
+scrollTrigger:{
+
+trigger:item,
+
+start:"top 85%"
+
+},
+
+opacity:0,
+
+y:80,
+
+duration:.9
+
+});
+
+});
+
+// ===============================
+// SMOOTH ANCHOR SCROLL
+// ===============================
+
+document.querySelectorAll('a[href^="#"]')
+
+.forEach(link=>{
 
 link.addEventListener("click",function(e){
 
 e.preventDefault();
 
-document.querySelector
+const target =
+
+document.querySelector(
+
+this.getAttribute("href")
+
+);
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+// ===============================
+// VIDEO PLAYBACK
+// ===============================
+
+const heroVideo =
+
+document.querySelector(".hero-video");
+
+if(heroVideo){
+
+heroVideo.play().catch(()=>{});
+
+}
+
+// ===============================
+// CONSOLE
+// ===============================
+
+console.log("🚀 Future AI v2 Loaded Successfully");
