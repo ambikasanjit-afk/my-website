@@ -136,3 +136,150 @@ Watch Demo
 
 </body>
 </html>
+<!-- =========================
+FEATURED SECTION
+========================= -->
+
+<section id="featured" class="featured">
+
+<div class="featured-content">
+
+<h4>FEATURED AI TOOL</h4>
+
+<h2>ChatGPT</h2>
+
+<p>
+The world's leading AI assistant for writing,
+coding, learning and productivity.
+</p>
+
+<a href="https://chatgpt.com" target="_blank" class="primary-btn">
+Launch ChatGPT
+</a>
+
+</div>
+
+<div class="featured-visual">
+
+<div class="glass-card">
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>Future AI Spotlight</h3>
+
+<p>Discover the latest AI innovations.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =========================
+STATS
+========================= -->
+
+<section class="stats">
+
+<div class="stat-card">
+<h2>30+</h2>
+<p>Trending AI Tools</p>
+</div>
+
+<div class="stat-card">
+<h2>10M+</h2>
+<p>Monthly Users</p>
+</div>
+
+<div class="stat-card">
+<h2>150+</h2>
+<p>Countries</p>
+</div>
+
+<div class="stat-card">
+<h2>24/7</h2>
+<p>Always Available</p>
+</div>
+
+</section>
+
+<!-- =========================
+NEWSLETTER
+========================= -->
+
+<section class="newsletter">
+
+<h2>Stay Updated 🚀</h2>
+
+<p>
+Get notified whenever new AI tools are added.
+</p>
+
+<form class="newsletter-form">
+
+<input
+type="email"
+placeholder="Enter your email">
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer id="contact">
+
+<div class="footer-logo">
+
+<i class="fa-solid fa-microchip"></i>
+
+<span>Future AI</span>
+
+</div>
+
+<p>
+
+Discover the future of Artificial Intelligence.
+
+</p>
+
+<div class="footer-social">
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-instagram"></i></a>
+
+<a href="#"><i class="fab fa-x-twitter"></i></a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Future AI. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- Libraries -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
