@@ -1,72 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Future AI | 25+ Trending AI Tools</title>
+<meta charset="UTF-8">
 
-    <meta name="description"
-          content="Discover the best AI tools without login.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="keywords"
-          content="AI, ChatGPT, Claude, Gemini, Midjourney, Future AI">
+<title>Future AI | Discover the Future of AI</title>
 
-    <link rel="icon" href="assets/images/favicon.png">
+<meta name="description" content="Discover 30+ Trending AI Tools">
 
-    <!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
-          rel="stylesheet">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Font Awesome -->
+<link rel="stylesheet" href="style.css">
 
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
-
-    <!-- CSS -->
-
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!--========================
- LOADER
-=========================-->
+<!-- Loader -->
 
 <div id="loader">
 
-    <div class="loader-circle"></div>
+<div class="loader-circle"></div>
 
-    <h1>Future AI</h1>
+<h1>Future AI</h1>
 
 </div>
 
-<!--========================
- BACKGROUND
-=========================-->
+<!-- Video Hero -->
 
-<div class="grid-bg"></div>
+<section class="hero">
 
-<div class="glow glow-1"></div>
+<video autoplay muted loop playsinline class="hero-video">
 
-<div class="glow glow-2"></div>
+<source src="assets/videos/hero.mp4" type="video/mp4">
 
-<!--========================
- NAVBAR
-=========================-->
+</video>
 
-<header>
+<div class="hero-overlay"></div>
 
-<nav class="navbar">
+<header class="navbar">
 
 <div class="logo">
 
@@ -80,33 +62,23 @@
 
 <li><a href="#home">Home</a></li>
 
-<li><a href="#tools">Tools</a></li>
+<li><a href="#tools">AI Tools</a></li>
 
 <li><a href="#featured">Featured</a></li>
-
-<li><a href="#stats">Stats</a></li>
 
 <li><a href="#contact">Contact</a></li>
 
 </ul>
 
-<a href="#tools" class="btn-nav">
+<a href="#tools" class="nav-btn">
 
 Explore
 
 </a>
 
-</nav>
-
 </header>
 
-<!--========================
- HERO
-=========================-->
-
-<section id="home" class="hero">
-
-<div class="hero-left">
+<div class="hero-content">
 
 <h1>
 
@@ -114,271 +86,92 @@ Discover The
 
 <span>Future</span>
 
-of AI
+Of AI
 
 </h1>
 
 <p>
 
-Explore 25+ trending AI tools.
+30+ Trending AI Tools
 
-No Login.
+Without Login
 
-No Signup.
-
-Just Click & Create.
+One Beautiful Experience
 
 </p>
 
 <div class="hero-buttons">
 
-<a href="#tools" class="primary-btn">
+<a href="#tools"
 
-Explore Tools
+class="primary-btn">
 
-</a>
-
-<a href="#featured" class="secondary-btn">
-
-Learn More
+Explore AI
 
 </a>
 
-</div>
+<a href="#featured"
+
+class="secondary-btn">
+
+Watch Demo
+
+</a>
 
 </div>
 
-<div class="hero-right">
-
-<canvas id="hero-canvas"></canvas>
-
 </div>
 
-</section>
-<!-- ========================
-TRUSTED BY
-========================= -->
+<div class="scroll-indicator">
 
-<section class="trusted">
-
-<h2>Trusted By AI Enthusiasts Worldwide</h2>
-
-<div class="trusted-logos">
-
-<span>OpenAI</span>
-
-<span>Google</span>
-
-<span>Microsoft</span>
-
-<span>Meta</span>
-
-<span>Adobe</span>
-
-<span>Amazon</span>
+<i class="fa-solid fa-angle-down"></i>
 
 </div>
 
 </section>
 
-<!-- ========================
-SEARCH
-========================= -->
+<!-- AI TOOLS -->
 
-<section id="tools" class="search-section">
+<section id="tools" class="tools">
 
-<h2>Find Your Favorite AI Tool</h2>
+<h2>
 
-<div class="search-box">
+Trending AI Tools
 
-<input
-type="text"
-id="searchInput"
-placeholder="Search AI Tools...">
+</h2>
 
-<i class="fa-solid fa-magnifying-glass"></i>
+<div id="toolsGrid"
+
+class="tools-grid">
+
+<!-- JS Generates 30 Cards -->
 
 </div>
 
 </section>
-
-<!-- ========================
-CATEGORY FILTER
-========================= -->
-
-<section class="categories">
-
-<button class="active">All</button>
-
-<button>Text</button>
-
-<button>Image</button>
-
-<button>Video</button>
-
-<button>Voice</button>
-
-<button>Coding</button>
-
-<button>Productivity</button>
-
-</section>
-
-<!-- ========================
-TOOLS GRID
-========================= -->
-
-<section class="tools-grid">
-
-<div class="tool-card">
-
-<i class="fa-solid fa-robot"></i>
-
-<h3>ChatGPT</h3>
-
-<p>AI Assistant for Everything</p>
-
-<a href="https://chatgpt.com" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-<div class="tool-card">
-
-<i class="fa-solid fa-image"></i>
-
-<h3>Midjourney</h3>
-
-<p>Create Amazing AI Images</p>
-
-<a href="https://www.midjourney.com/" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-<div class="tool-card">
-
-<i class="fa-solid fa-video"></i>
-
-<h3>Runway</h3>
-
-<p>AI Video Editing</p>
-
-<a href="https://runwayml.com/" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-<div class="tool-card">
-
-<i class="fa-solid fa-volume-high"></i>
-
-<h3>ElevenLabs</h3>
-
-<p>AI Voice Generator</p>
-
-<a href="https://elevenlabs.io/" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-<div class="tool-card">
-
-<i class="fa-solid fa-brain"></i>
-
-<h3>Claude</h3>
-
-<p>Powerful AI Chatbot</p>
-
-<a href="https://claude.ai/" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-<div class="tool-card">
-
-<i class="fa-solid fa-gem"></i>
-
-<h3>Gemini</h3>
-
-<p>Google AI Assistant</p>
-
-<a href="https://gemini.google.com/" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-<div class="tool-card">
-
-<i class="fa-solid fa-code"></i>
-
-<h3>GitHub Copilot</h3>
-
-<p>AI Coding Assistant</p>
-
-<a href="https://github.com/features/copilot" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-<div class="tool-card">
-
-<i class="fa-solid fa-film"></i>
-
-<h3>Sora</h3>
-
-<p>Text to Video AI</p>
-
-<a href="https://openai.com/sora" target="_blank">
-
-Explore
-
-</a>
-
-</div>
-
-</section><!-- ========================
-FEATURED SECTION
+<!-- =========================
+FEATURED AI
 ========================= -->
 
 <section id="featured" class="featured">
 
-<div class="featured-content">
+<div class="featured-left">
 
-<h2> Featured AI Tool</h2>
+<h4>FEATURED AI</h4>
 
-<h1>ChatGPT</h1>
+<h2>ChatGPT</h2>
 
 <p>
 
-The world's most popular AI assistant for writing,
-coding, learning, brainstorming, and productivity.
+The world's leading AI assistant for coding,
+writing, learning, and productivity.
 
 </p>
 
 <a href="https://chatgpt.com"
+
 target="_blank"
+
 class="primary-btn">
 
 Launch ChatGPT
@@ -387,57 +180,69 @@ Launch ChatGPT
 
 </div>
 
-<div class="featured-image">
+<div class="featured-right">
 
-<img
-src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80"
-alt="AI">
+<div class="featured-card">
+
+<div class="glow-circle"></div>
+
+<i class="fa-solid fa-robot"></i>
+
+<h3>Future AI Spotlight</h3>
+
+<p>
+
+Explore next-generation AI experiences.
+
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<!-- ========================
+<!-- =========================
 STATISTICS
 ========================= -->
 
-<section id="stats" class="stats">
+<section class="stats">
 
-<div class="stat-box">
+<div class="stat-card">
 
-<h1>25+</h1>
+<h2 class="counter" data-target="30">0</h2>
 
 <p>Trending AI Tools</p>
 
 </div>
 
-<div class="stat-box">
+<div class="stat-card">
 
-<h1>10M+</h1>
+<h2 class="counter" data-target="10000000">0</h2>
 
 <p>Monthly Users</p>
 
 </div>
 
-<div class="stat-box">
+<div class="stat-card">
 
-<h1>100+</h1>
+<h2 class="counter" data-target="150">0</h2>
 
 <p>Countries</p>
 
 </div>
 
-<div class="stat-box">
+<div class="stat-card">
 
-<h1>24/7</h1>
+<h2 class="counter" data-target="24">0</h2>
 
-<p>Available</p>
+<p>Hours Available</p>
 
 </div>
 
 </section>
 
-<!-- ========================
+<!-- =========================
 NEWSLETTER
 ========================= -->
 
@@ -451,14 +256,16 @@ Stay Updated 🚀
 
 <p>
 
-Get updates about the latest AI tools.
+Get updates whenever new AI tools are added.
 
 </p>
 
-<div class="newsletter-box">
+<form class="newsletter-form">
 
 <input
+
 type="email"
+
 placeholder="Enter your email">
 
 <button>
@@ -467,11 +274,11 @@ Subscribe
 
 </button>
 
-</div>
+</form>
 
 </section>
 
-<!-- ========================
+<!-- =========================
 FOOTER
 ========================= -->
 
@@ -481,17 +288,17 @@ FOOTER
 
 <i class="fa-solid fa-microchip"></i>
 
-Future AI
+<span>Future AI</span>
 
 </div>
 
 <p>
 
-Discover the Future of Artificial Intelligence
+Discover the Future of Artificial Intelligence.
 
 </p>
 
-<div class="socials">
+<div class="social-links">
 
 <a href="#"><i class="fab fa-github"></i></a>
 
@@ -499,30 +306,22 @@ Discover the Future of Artificial Intelligence
 
 <a href="#"><i class="fab fa-instagram"></i></a>
 
-<a href="#"><i class="fab fa-x-twitter"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
 
 </div>
 
 <p class="copyright">
 
-© 2026 Future AI.
-All Rights Reserved.
+© 2026 Future AI. All Rights Reserved.
 
 </p>
 
 </footer>
 
-<!-- JS -->
+<!-- Libraries -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+<script src="https://cdnjs.cloudflare
