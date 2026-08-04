@@ -1080,4 +1080,70 @@ font-size:42px;
 
 }
 
+.trending{
+
+padding:70px 0;
+
+overflow:hidden;
+
+background:#070b18;
+
+}
+
+.trending h2{
+
+text-align:center;
+
+margin-bottom:35px;
+
+font-size:42px;
+
+}
+
+.marquee{
+
+overflow:hidden;
+
+white-space:nowrap;
+
+}
+
+.marquee-track{
+
+display:inline-flex;
+
+gap:30px;
+
+animation:scrollLeft 20s linear infinite;
+
+}
+
+.marquee-track span{
+
+padding:15px 30px;
+
+background:rgba(255,255,255,.08);
+
+border-radius:50px;
+
+border:1px solid rgba(255,255,255,.1);
+
+font-weight:600;
+
+}
+
+@keyframes scrollLeft{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
 }
