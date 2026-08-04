@@ -1,6 +1,64 @@
 /*=====================================
  FUTURE AI
  Premium JavaScript
+/*=============================
+ GSAP ANIMATIONS
+=============================*/
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".hero h1",{
+
+y:100,
+
+opacity:0,
+
+duration:1.2
+
+});
+
+gsap.from(".hero p",{
+
+y:80,
+
+opacity:0,
+
+delay:.3,
+
+duration:1
+
+});
+
+gsap.from(".hero-buttons",{
+
+y:60,
+
+opacity:0,
+
+delay:.6,
+
+duration:1
+
+});
+
+
+/*=============================
+ 3D CARD EFFECT
+=============================*/
+
+VanillaTilt.init(document.querySelectorAll(".tool-card"),{
+
+max:18,
+
+speed:400,
+
+glare:true,
+
+"max-glare":0.35,
+
+scale:1.05
+
+});
 =====================================*/
 
 // Smooth Scroll
